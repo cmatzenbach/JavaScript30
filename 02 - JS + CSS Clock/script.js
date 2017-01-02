@@ -8,7 +8,6 @@ setInterval(getShift.bind(null, 'h', hour), 1000);
 
 
 function getShift(timeType, el) {
-  console.log('called');
   var t = new Date();
 
   if (timeType === 'h') {
@@ -22,7 +21,6 @@ function getShift(timeType, el) {
   else if (timeType === 's') {
     var shift = (t.getSeconds()/60) * 360 + 90;
     el.style.transform = `rotate(${shift}deg)`;
-    console.log('going');
   }
   else return "ERROR";
 }
